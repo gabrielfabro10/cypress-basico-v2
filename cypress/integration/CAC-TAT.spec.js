@@ -149,6 +149,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         .selectFile('@sampleFile')
         .should(function($input) {
           expect($input[0].files[0].name).to.equal('example.json')
+          
         })
     })
   })
