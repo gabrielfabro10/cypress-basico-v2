@@ -4,19 +4,18 @@
 describe('Login', () => {
 
     beforeEach(() => {
-        cy.visit('https://appdev.forsign.digital/signin')
+        cy.visit('https://apphml.forsign.digital/signin')
     })
 
-    it('com sucesso', () => {
+    it.only('login', () => {
 
       cy.get('[data-test="inp-email"]')
         .type(Cypress.env('user_name'))
       cy.get('[data-test="inp-password"]')
         .type(Cypress.env('user_password'))
-      cy.contains('button', 'Login').click()
-  
+      cy.get('[data-test="btn-login"]').click()
+      
+      cy.contains('Página inicial').should('be.visible', {delay: 6000 })
     })
   })
-
-
   

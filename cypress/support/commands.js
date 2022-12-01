@@ -31,3 +31,12 @@ Cypress.Commands.add('fillMandatoryFieldsAndSubmit', function() {
     cy.get('#open-text-area').type('Teste')
     cy.contains('button', 'Enviar').click()
   })
+
+  Cypress.Commands.add('login', () => {
+    cy.visit('https://apphml.forsign.digital/signin')
+    cy.get('[data-test="inp-email"]')
+        .type(Cypress.env('user_name'))
+      cy.get('[data-test="inp-password"]')
+        .type(Cypress.env('user_password'))
+      cy.get('[data-test="btn-login"]').click()
+  })
