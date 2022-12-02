@@ -7,7 +7,7 @@ describe('Login', () => {
         cy.visit('https://apphml.forsign.digital/signin')
     })
 
-    it.only('login', () => {
+    it('login', () => {
 
       cy.get('[data-test="inp-email"]')
         .type(Cypress.env('user_name'))
