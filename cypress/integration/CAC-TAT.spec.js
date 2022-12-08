@@ -87,6 +87,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
       cy.get('#open-text-area').type(longText, {delay: 0})
       cy.get('button[type="submit"]').click()
       cy.get('.success').should('be.visible')
+      
   })
 
  it('envia o formulário com sucesso usando um comando customizado', () =>{
